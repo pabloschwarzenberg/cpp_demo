@@ -1,4 +1,0 @@
-D:\Clases\UNAB\202010\ICF331\cpp_demo\prim\Debug\prim.exe
-D:\Clases\UNAB\202010\ICF331\cpp_demo\prim\Debug\prim.pdb
-D:\Clases\UNAB\202010\ICF331\cpp_demo\Debug\prim.exe
-D:\Clases\UNAB\202010\ICF331\cpp_demo\Debug\prim.pdb
