@@ -4,6 +4,7 @@ DerivedDataCache/
 Intermediate/
 Saved/
 Build/
+Debug/
 Plugins/UnrealEnginePython/Binaries/Win64/*
 Plugins/UnrealEnginePython/DerivedDataCache/
 Plugins/UnrealEnginePython/Intermediate/
