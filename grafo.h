@@ -19,6 +19,7 @@ public:
 	bool existeArco(int u, int v);
 	int costo(int u, int v);
 	void generarGrilla();
+	const Nodo& getNodo(int i);
 	void prim(int s);
 	ostrstream serializar();
 
@@ -31,8 +32,5 @@ protected:
 private:
 	Nodo* V;
 	int nodos;
-	int nodos_grilla;
 	int** ady;
 };
-
-

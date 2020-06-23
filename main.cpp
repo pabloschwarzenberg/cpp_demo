@@ -1,20 +1,13 @@
-#include "Grafo.h"
-#include <fstream>
+#include "Laberinto.h"
+#include <iostream>
 
 int main(int argc, char** argv)
 {
-	Grafo grafo(16);
-	fstream f;
-	ostrstream s;
+	Laberinto l(16);
 
-	grafo.generarGrilla();
-	grafo.prim(0);
+	l.generar();
 
-	s = grafo.serializar();
-
-	f.open("mapa.csv", ios::out);
-	f << s.str();
-	f.close();
+	std::cout << l << endl;
 
 	return 0;
 }

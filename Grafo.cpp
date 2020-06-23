@@ -32,7 +32,6 @@ Grafo::Grafo(int nodos)
 	int i, j;
 
 	this->nodos = nodos;
-	this->nodos_grilla = (int)sqrt(nodos);
 	this->V = new Nodo[nodos];
 	if (this->V == nullptr)
 		error_fatal("Error creando grafo");
@@ -40,7 +39,6 @@ Grafo::Grafo(int nodos)
 	ady = new int*[nodos];
 	if (ady == nullptr)
 		error_fatal("Error creando matriz de adyacencia");
-	srand((int)time(NULL));
 	for (i = 0; i < nodos; i++)
 	{
 		ady[i] = new int[nodos];
@@ -68,6 +66,7 @@ Grafo::~Grafo()
 void Grafo::generarVecino(int nodo, int fila, int columna)
 {
 	int vecino;
+	int nodos_grilla = (int)sqrt(nodos);
 
 	if (fila < 0 || fila >= nodos_grilla || columna < 0 || columna >= nodos_grilla)
 		return;
@@ -85,7 +84,9 @@ void Grafo::generarGrilla()
 	int i;
 	int fila;
 	int columna;
+	int nodos_grilla = (int)sqrt(nodos);
 
+	srand((int)time(NULL));
 	for (i = 0; i < nodos; i++)
 	{
 		columna = i % nodos_grilla;
@@ -162,4 +163,9 @@ ostrstream Grafo::serializar()
 	}
 	buffer << ends;
 	return buffer;
+}
+
+const Nodo& Grafo::getNodo(int i)
+{
+	return V[i];
 }
